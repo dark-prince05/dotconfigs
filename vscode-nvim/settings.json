@@ -1,0 +1,92 @@
+{
+    "workbench.preferredHighContrastColorTheme": "Visual Studio Dark",
+    "vscode-neovim.neovimInitVimPaths.linux": "/home/darkprince/.config/vscode-nvim/init.lua",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "vscode-neovim.compositeKeys": {
+        "jk": {
+            // Use lua to execute any logic
+            "command": "vscode-neovim.lua",
+            "args": [
+                [
+                    "local code = require('vscode')",
+                    "code.action('vscode-neovim.escape')",
+                ],
+            ],
+        },
+    },
+    "vscode-neovim.ctrlKeysForInsertMode": [
+        "a",
+        "c",
+        "d",
+        "h",
+        "j",
+        "k",
+        "m",
+        "o",
+        "p",
+        "r",
+        "t",
+        "u",
+        "w",
+        "s",
+    ],
+    "vscode-neovim.ctrlKeysForNormalMode": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "o",
+        "p",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "/",
+        "]",
+        "right",
+        "left",
+        "up",
+        "down",
+        "backspace",
+        "delete",
+    ],
+    "editor.lineNumbers": "relative",
+    "editor.tabSize": 2,
+    "git.openRepositoryInParentFolders": "never",
+    //for this multicommand to work you need to install multicommand extension
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.copyAndEscape",
+            "sequence": [
+                "editor.action.clipboardCopyAction",
+                "vscode-neovim.escape"
+            ]
+        },
+        {
+            "command": "multiCommand.openExplorerAndFocus",
+            "sequence": [
+                "workbench.action.toggleSidebarVisibility",
+                {
+        "command": "workbench.view.explorer",
+        "delay": 200
+      }
+            ]
+        },
+    ],
+    "editor.multiCursorModifier": "ctrlCmd"
+}

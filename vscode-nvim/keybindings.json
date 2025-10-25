@@ -1,0 +1,54 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+y",
+        "command": "multiCommand.copyAndEscape",
+        "when": "editorTextFocus && neovim.ctrlKeysNormal.y && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.navigateDown"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.navigateUp"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight"
+    },
+    {
+        "key": "alt+j",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "neovim.mode != 'insert'"
+    },
+    {
+        "key": "alt+k",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "neovim.mode != 'insert'"
+    },
+    {
+        "key": "alt+h",
+        "command": "cursorLeft",
+        "when": "neovim.mode == 'insert'"
+    },
+    {
+        "key": "alt+j",
+        "command": "cursorDown",
+        "when": "neovim.mode == 'insert'"
+    },
+    {
+        "key": "alt+k",
+        "command": "cursorUp",
+        "when": "neovim.mode == 'insert'"
+    },
+    {
+        "key": "alt+l",
+        "command": "cursorRight",
+        "when": "neovim.mode == 'insert'"
+    },
+]
