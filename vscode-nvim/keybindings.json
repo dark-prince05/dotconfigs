@@ -7,7 +7,7 @@
     },
     {
         "key": "ctrl+h",
-        "command": "workbench.action.navigateLeft"
+        "command": "workbench.action.navigateLeft",
     },
     {
         "key": "ctrl+j",
@@ -20,6 +20,16 @@
     {
         "key": "ctrl+l",
         "command": "workbench.action.navigateRight"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion",
+        "when": "neovim.mode == 'insert' && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion",
+        "when": "neovim.mode == 'insert' && suggestWidgetVisible"
     },
     {
         "key": "alt+j",
@@ -50,5 +60,33 @@
         "key": "alt+l",
         "command": "cursorRight",
         "when": "neovim.mode == 'insert'"
+    },
+    // Navigate down in Quick Open and Command Palette
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    // Navigate up in Quick Open and Command Palette
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    // Focus the search list when it has results
+    {
+        "key": "enter",
+        "command": "search.action.focusSearchList",
+        "when": "hasSearchResult"
+    },
+    {
+        "key": "ctrl+shift+alt+space",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "editor.action.smartSelect.expand",
+        "when": "editorTextFocus"
     },
 ]

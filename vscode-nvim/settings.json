@@ -1,5 +1,6 @@
 {
-    "workbench.preferredHighContrastColorTheme": "Visual Studio Dark",
+    "workbench.activityBar.orientation": "vertical", //used for ctrl h,j,k,l navigations in cursor
+    "workbench.preferredHighContrastColorTheme": "Tokyo Night",
     "vscode-neovim.neovimInitVimPaths.linux": "/home/darkprince/.config/vscode-nvim/init.lua",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
@@ -68,7 +69,6 @@
     "editor.lineNumbers": "relative",
     "editor.tabSize": 2,
     "git.openRepositoryInParentFolders": "never",
-    //for this multicommand to work you need to install multicommand extension
     "multiCommand.commands": [
         {
             "command": "multiCommand.copyAndEscape",
@@ -77,16 +77,11 @@
                 "vscode-neovim.escape"
             ]
         },
-        {
-            "command": "multiCommand.openExplorerAndFocus",
-            "sequence": [
-                "workbench.action.toggleSidebarVisibility",
-                {
-        "command": "workbench.view.explorer",
-        "delay": 200
-      }
-            ]
-        },
     ],
-    "editor.multiCursorModifier": "ctrlCmd"
+    "editor.multiCursorModifier": "ctrlCmd",
+    "workbench.list.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
 }
